@@ -12,10 +12,17 @@ biến động giá cổ phiếu trên thị trường Việt Nam. Nhóm chọn 
 (Vietcombank) làm đại diện vì thanh khoản cao và có ảnh hưởng lớn tới
 chỉ số VN-Index.
 
-Bài toán được phát biểu dưới dạng **hồi quy lợi suất kỳ kế tiếp**
-(`r_{t+1} = Close_{t+1}/Close_t - 1`) thay vì dự đoán giá tuyệt đối, để các mô
-hình phi tuyến có thể tổng quát hóa công bằng (xem giải thích chi tiết trong
+Bài toán được phát biểu dưới dạng **hồi quy log-return horizon 20 phiên giao
+dịch** (`r_{t+20} = log(Close_{t+20}/Close_t)`) — khung trung hạn ≈ 1 tháng,
+phổ biến trong swing trading, là khung mà tín hiệu xu hướng vượt mức ngẫu
+nhiên 50 % có ý nghĩa thống kê (xem giải thích chi tiết trong
 `Report/Report.ipynb`).
+
+**Kết quả tóm tắt** (test 798 phiên, chronological 80/20):
+- Linear Regression: **DirAcc 54.76 %**, MAPE giá 4.54 %.
+- Random Forest: DirAcc 52.38 %, MAPE giá 4.47 %.
+- Voting Ensemble: DirAcc 52.76 %, MAPE giá 4.50 %.
+- Sweep đa horizon: DirAcc tăng từ ~ 50 % (1 ngày) lên ~ 62 % (60 ngày).
 
 ## Mô hình thử nghiệm
 

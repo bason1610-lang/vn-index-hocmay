@@ -38,7 +38,10 @@ lớn nhất, thanh khoản cao và có ảnh hưởng đáng kể tới chỉ s
 - Tổng số dòng: **7.673**
   - `Interval = "1d"`: **4.209** phiên (từ 2009-06-30 tới 2026-05-15).
   - `Interval = "1h"`: **3.464** phiên giờ (~ 730 ngày gần nhất do giới hạn của Yahoo Finance).
-- Số cột thô: **9** (sau feature engineering: thêm 14 đặc trưng và 1 biến mục tiêu).
+- Số cột thô: **9** (sau feature engineering: thêm **25 đặc trưng** và 1 biến mục tiêu).
+
+Ngoài ra `horizon_results.csv` lưu kết quả sweep đa horizon (xem
+`scripts/ml_utils.py::compare_horizons`).
 
 ## Ghi chú
 

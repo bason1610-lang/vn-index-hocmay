@@ -7796,7 +7796,7 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1dd30355">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=187c4fe2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7837,39 +7837,41 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c04cc888">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5e24d947">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="4.1.-Gi%E1%BB%9Bi-thi%E1%BB%87u-v%E1%BB%81-b%C3%A0i-to%C3%A1n-v%C3%A0-d%E1%BB%AF-li%E1%BB%87u">4.1. Giới thiệu về bài toán và dữ liệu<a class="anchor-link" href="#4.1.-Gi%E1%BB%9Bi-thi%E1%BB%87u-v%E1%BB%81-b%C3%A0i-to%C3%A1n-v%C3%A0-d%E1%BB%AF-li%E1%BB%87u">¶</a></h2><h3 id="4.1.1.-B%E1%BB%91i-c%E1%BA%A3nh">4.1.1. Bối cảnh<a class="anchor-link" href="#4.1.1.-B%E1%BB%91i-c%E1%BA%A3nh">¶</a></h3><p>Thị trường chứng khoán Việt Nam được đo lường bởi chỉ số <strong>VN-Index</strong> — phản ánh xu hướng chung của các cổ phiếu niêm yết trên Sở Giao dịch Chứng khoán TP.HCM. Việc dự đoán biến động giá cổ phiếu trong tương lai dựa trên dữ liệu lịch sử có ý nghĩa lớn đối với:</p>
+<h2 id="4.1.-Gi%E1%BB%9Bi-thi%E1%BB%87u-v%E1%BB%81-b%C3%A0i-to%C3%A1n-v%C3%A0-d%E1%BB%AF-li%E1%BB%87u">4.1. Giới thiệu về bài toán và dữ liệu<a class="anchor-link" href="#4.1.-Gi%E1%BB%9Bi-thi%E1%BB%87u-v%E1%BB%81-b%C3%A0i-to%C3%A1n-v%C3%A0-d%E1%BB%AF-li%E1%BB%87u">¶</a></h2><h3 id="4.1.1.-B%E1%BB%91i-c%E1%BA%A3nh">4.1.1. Bối cảnh<a class="anchor-link" href="#4.1.1.-B%E1%BB%91i-c%E1%BA%A3nh">¶</a></h3><p>Thị trường chứng khoán Việt Nam được đo lường bởi chỉ số <strong>VN-Index</strong> — phản
+ánh xu hướng chung của các cổ phiếu niêm yết trên Sở Giao dịch Chứng khoán
+TP.HCM. Việc dự đoán biến động giá cổ phiếu trong tương lai có ý nghĩa lớn:</p>
 <ul>
-<li><strong>Nhà đầu tư cá nhân và tổ chức</strong>: hỗ trợ ra quyết định mua/bán, định lượng kỳ vọng lợi nhuận và rủi ro.</li>
-<li><strong>Quản trị danh mục</strong>: tối ưu phân bổ tài sản, hedge rủi ro thị trường.</li>
-<li><strong>Nghiên cứu kinh tế</strong>: kiểm chứng các giả thuyết về Hiệu Quả Thị Trường (Efficient Market Hypothesis — EMH).</li>
+<li><strong>Nhà đầu tư cá nhân và tổ chức</strong> — hỗ trợ ra quyết định mua/bán.</li>
+<li><strong>Quản trị danh mục</strong> — tối ưu phân bổ tài sản, hedge rủi ro.</li>
+<li><strong>Nghiên cứu kinh tế</strong> — kiểm chứng Hiệu Quả Thị Trường (EMH).</li>
 </ul>
-<p>Mặc dù theo dạng yếu của EMH, giá hiện tại đã phản ánh toàn bộ thông tin lịch sử (do đó dự đoán "chính xác" là không thể), trên thực tế vẫn tồn tại các <em>anomalies</em> và <em>patterns</em> ngắn hạn mà mô hình thống kê / học máy có thể khai thác. Đây là động lực để nhóm chọn đề tài này.</p>
 <h3 id="4.1.2.-C%C3%A2u-h%E1%BB%8Fi-nghi%C3%AAn-c%E1%BB%A9u">4.1.2. Câu hỏi nghiên cứu<a class="anchor-link" href="#4.1.2.-C%C3%A2u-h%E1%BB%8Fi-nghi%C3%AAn-c%E1%BB%A9u">¶</a></h3><blockquote>
-<p><strong>Q1.</strong> Dựa vào các đặc trưng kỹ thuật được tính từ giá lịch sử (lợi suất, đường trung bình động, RSI, độ biến động…), liệu có thể dự đoán <strong>lợi suất</strong> (return) của ngày giao dịch tiếp theo không?</p>
-<p><strong>Q2.</strong> Khi suy ngược về miền giá, sai số tuyệt đối (theo VND) ở mức nào là có thể chấp nhận được?</p>
-<p><strong>Q3.</strong> Mô hình tuyến tính (Linear Regression) có thực sự đủ, hay các mô hình phi tuyến (KNN, Random Forest) cho kết quả vượt trội?</p>
-<p><strong>Q4.</strong> Voting Ensemble có giúp giảm phương sai và cải thiện hiệu năng so với từng mô hình đơn lẻ?</p>
+<p><strong>Q1.</strong> Có thể dự đoán biến động giá VCB ở khung trung hạn (1 tháng giao
+dịch, ≈ 20 phiên) từ các đặc trưng kỹ thuật rút từ giá lịch sử không?</p>
+<p><strong>Q2.</strong> Tín hiệu xu hướng có thay đổi theo <em>horizon</em> dự đoán hay không?
+Khung 1 ngày, 5 ngày, 20 ngày, 60 ngày có cùng độ khó?</p>
+<p><strong>Q3.</strong> Linear Regression có đủ — hay phải dùng KNN / Random Forest /
+Voting Ensemble mới đạt DirAcc &gt; 50 %?</p>
 </blockquote>
-<h3 id="4.1.3.-T%E1%BA%ADp-d%E1%BB%AF-li%E1%BB%87u">4.1.3. Tập dữ liệu<a class="anchor-link" href="#4.1.3.-T%E1%BA%ADp-d%E1%BB%AF-li%E1%BB%87u">¶</a></h3><p>Nhóm thu thập dữ liệu giá lịch sử của mã <strong>VCB</strong> (Vietcombank — <code>VCB.VN</code> trên Yahoo Finance) qua thư viện <a href="https://pypi.org/project/yfinance/"><code>yfinance</code></a>. Dữ liệu được lưu tại <code>data/vcb_stock.csv</code>.</p>
-<p><strong>Lý do chọn VCB:</strong></p>
+<h3 id="4.1.3.-T%E1%BA%ADp-d%E1%BB%AF-li%E1%BB%87u">4.1.3. Tập dữ liệu<a class="anchor-link" href="#4.1.3.-T%E1%BA%ADp-d%E1%BB%AF-li%E1%BB%87u">¶</a></h3><p>Dữ liệu giá lịch sử của <strong>VCB</strong> được tải qua thư viện
+<a href="https://pypi.org/project/yfinance/"><code>yfinance</code></a> (Yahoo Finance API):</p>
 <ul>
-<li>Vốn hóa lớn nhất nhì thị trường, chiếm tỷ trọng cao trong rổ VN-Index → đại diện tốt cho xu hướng thị trường ngân hàng.</li>
-<li>Thanh khoản cao → giá ít bị nhiễu do thao túng.</li>
-<li>Niêm yết từ 2009 → có lịch sử dài (&gt;4.000 phiên ngày).</li>
+<li>4.209 phiên ngày (2009-06-30 → 2026-05-15) — dùng huấn luyện chính.</li>
+<li>3.464 phiên giờ — phục vụ phân tích bổ sung.</li>
 </ul>
-<p><strong>Quy mô:</strong> 7.673 quan sát (4.209 phiên ngày + 3.464 phiên giờ — khung 1h chỉ có cho 730 ngày gần nhất do giới hạn API).</p>
-<p><strong>Các biến gốc (8 cột):</strong> <code>Date</code>, <code>Open</code>, <code>High</code>, <code>Low</code>, <code>Close</code>, <code>Volume</code>, <code>Interval</code>, <code>Ticker</code>/<code>Symbol</code> — tổ hợp gồm biến <strong>liên tục</strong> (giá), <strong>rời rạc</strong> (volume), <strong>phân loại</strong> (Interval, Ticker), thỏa yêu cầu của môn học.</p>
-<p>Sau khi sinh đặc trưng kỹ thuật (xem mục 4.2), tập đặc trưng mở rộng có <strong>14 biến đầu vào</strong> + <strong>1 biến mục tiêu</strong>.</p>
+<p>Mỗi quan sát gồm <code>Date</code>, <code>Open</code>, <code>High</code>, <code>Low</code>, <code>Close</code>, <code>Volume</code>,
+<code>Interval</code>, <code>Ticker</code>/<code>Symbol</code>. Tổ hợp đầy đủ biến phân loại + rời rạc +
+liên tục, thỏa yêu cầu môn học.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=75776661">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2adcaf3d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7879,13 +7881,11 @@ a.anchor-link {
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'../scripts'</span><span class="p">)</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ml_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_raw_data</span>
 
 <span class="n">df_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'../data/vcb_stock.csv'</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Tổng số dòng:'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_raw</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Khung thời gian:'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df_raw</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Interval'</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Khoảng thời gian:'</span><span class="p">,</span> <span class="n">df_raw</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="s1">'→'</span><span class="p">,</span> <span class="n">df_raw</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Khoảng:'</span><span class="p">,</span> <span class="n">df_raw</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="s1">'→'</span><span class="p">,</span> <span class="n">df_raw</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
 <span class="n">df_raw</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -7900,11 +7900,10 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Tổng số dòng: 7673
-Khung thời gian:
 Interval
 1d    4209
 1h    3464
-Khoảng thời gian: 2009-06-30 00:00:00 → 2026-05-15 07:00:00+00:00
+Khoảng: 2009-06-30 00:00:00 → 2026-05-15 07:00:00+00:00
 </pre>
 </div>
 </div>
@@ -8009,16 +8008,18 @@ Khoảng thời gian: 2009-06-30 00:00:00 → 2026-05-15 07:00:00+00:00
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=71a13d30">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6252c019">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="4.2.-K%E1%BA%BF-ho%E1%BA%A1ch-ph%C3%A2n-t%C3%ADch-d%E1%BB%AF-li%E1%BB%87u">4.2. Kế hoạch phân tích dữ liệu<a class="anchor-link" href="#4.2.-K%E1%BA%BF-ho%E1%BA%A1ch-ph%C3%A2n-t%C3%ADch-d%E1%BB%AF-li%E1%BB%87u">¶</a></h2><h3 id="4.2.1.-%C4%90%E1%BB%8Bnh-ngh%C4%A9a-input/output">4.2.1. Định nghĩa input/output<a class="anchor-link" href="#4.2.1.-%C4%90%E1%BB%8Bnh-ngh%C4%A9a-input/output">¶</a></h3><p>Một cạm bẫy nổi tiếng khi dự đoán giá cổ phiếu bằng học máy là <strong>dự đoán trực tiếp giá tuyệt đối</strong>. Do giá có xu hướng tăng theo thời gian, miền giá trị ở tập test thường nằm <strong>ngoài</strong> miền của tập train. Mô hình dựa trên cây (Random Forest) hay khoảng cách (KNN) <strong>không thể ngoại suy</strong> — sai số tăng vọt. Trong khi đó Linear Regression có vẻ "thắng" nhưng thực chất chỉ vì hệ số gần như sao chép giá hiện tại sang ngày mai.</p>
-<p>Để các mô hình được đánh giá <strong>công bằng</strong>, nhóm phát biểu lại bài toán dưới dạng <em>stationary</em>:</p>
-<p>$$\boxed{\;\hat r_{t+1} = f(\mathbf{x}_t),\quad \hat C_{t+1} = C_t \cdot (1 + \hat r_{t+1})\;}$$</p>
-<p>trong đó $r_{t+1} = C_{t+1}/C_t - 1$ là <strong>lợi suất</strong> ngày kế tiếp.</p>
+<h2 id="4.2.-K%E1%BA%BF-ho%E1%BA%A1ch-ph%C3%A2n-t%C3%ADch-d%E1%BB%AF-li%E1%BB%87u">4.2. Kế hoạch phân tích dữ liệu<a class="anchor-link" href="#4.2.-K%E1%BA%BF-ho%E1%BA%A1ch-ph%C3%A2n-t%C3%ADch-d%E1%BB%AF-li%E1%BB%87u">¶</a></h2><h3 id="4.2.1.-%C4%90%E1%BB%8Bnh-ngh%C4%A9a-input-/-output">4.2.1. Định nghĩa input / output<a class="anchor-link" href="#4.2.1.-%C4%90%E1%BB%8Bnh-ngh%C4%A9a-input-/-output">¶</a></h3><p>Sau giai đoạn thí nghiệm sơ bộ (xem Milestone), nhóm nhận ra dự đoán giá
+<em>hôm sau</em> gặp <strong>cạm bẫy ngoại suy</strong> và DirAcc 1-day ~ 50 % (mức ngẫu nhiên).
+Vì vậy nhóm chọn target chính là <strong>log-return 20 phiên tới</strong> — khung 1
+tháng giao dịch, phổ biến trong chiến lược <em>swing trading</em> và là khung mà
+tín hiệu xu hướng vượt mức ngẫu nhiên có ý nghĩa.</p>
+<p>$$\boxed{\;\hat r_{t+h} = f(\mathbf x_t),\quad \hat C_{t+h} = C_t\,e^{\hat r_{t+h}},\quad h = 20\;}$$</p>
 <table>
 <thead>
 <tr>
@@ -8029,66 +8030,100 @@ Khoảng thời gian: 2009-06-30 00:00:00 → 2026-05-15 07:00:00+00:00
 <tbody>
 <tr>
 <td><strong>Output (Y)</strong></td>
-<td><code>Target_Return</code> — lợi suất kỳ kế tiếp</td>
+<td><code>Target_Return</code> = $\log(C_{t+20}/C_t)$</td>
 </tr>
 <tr>
-<td><strong>Input (X) — 14 đặc trưng</strong></td>
-<td><code>Return_{1,2,3,5,10}</code>, <code>MA{5,10,20}_Ratio</code>, <code>Vol_{5,10}</code>, <code>RSI_14</code>, <code>HL_Range</code>, <code>OC_Range</code>, <code>Vol_Change</code></td>
+<td><strong>Input (X) — 25 đặc trưng</strong></td>
+<td>xem bảng dưới</td>
 </tr>
 </tbody>
 </table>
-<p>Chi tiết các đặc trưng:</p>
-<ul>
-<li><strong>Lợi suất quá khứ</strong> <code>Return_k = Close_t / Close_{t-k} - 1</code> (k = 1, 2, 3, 5, 10): bắt động lượng (momentum).</li>
-<li><strong>Tỷ lệ với MA</strong> <code>MA_w_Ratio = Close_t / MA_w - 1</code>: vị trí so với đường trung bình động (xu hướng).</li>
-<li><strong>Volatility</strong> <code>Vol_w = std(Return_1) trong w phiên</code>: rủi ro rung lắc.</li>
-<li><strong>RSI(14)</strong> — chỉ báo quá mua / quá bán cổ điển.</li>
-<li><strong>HL_Range</strong> = <code>(High - Low)/Close</code>: biên độ trong ngày.</li>
-<li><strong>OC_Range</strong> = <code>(Close - Open)/Open</code>: lực tăng/giảm trong ngày.</li>
-<li><strong>Vol_Change</strong> — % thay đổi khối lượng giao dịch.</li>
-</ul>
-<h3 id="4.2.2.-%C4%90%E1%BB%99-%C4%91o-v%C3%A0-ph%C6%B0%C6%A1ng-ph%C3%A1p-%C4%91%C3%A1nh-gi%C3%A1">4.2.2. Độ đo và phương pháp đánh giá<a class="anchor-link" href="#4.2.2.-%C4%90%E1%BB%99-%C4%91o-v%C3%A0-ph%C6%B0%C6%A1ng-ph%C3%A1p-%C4%91%C3%A1nh-gi%C3%A1">¶</a></h3><p>Vì là bài toán hồi quy chuỗi thời gian, nhóm sử dụng <strong>chia theo thứ tự thời gian</strong> (chronological split, 80% train / 20% test, không shuffle) — phản ánh đúng kịch bản thực tế: huấn luyện trên quá khứ, dự đoán tương lai.</p>
-<p>Bốn độ đo đánh giá:</p>
-<table>
+<h3 id="4.2.2.-B%E1%BB%99-25-%C4%91%E1%BA%B7c-tr%C6%B0ng-stationary">4.2.2. Bộ 25 đặc trưng stationary<a class="anchor-link" href="#4.2.2.-B%E1%BB%99-25-%C4%91%E1%BA%B7c-tr%C6%B0ng-stationary">¶</a></h3><table>
+<thead>
+<tr>
+<th>Nhóm</th>
+<th>Đặc trưng</th>
+<th>Vai trò</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lợi suất quá khứ</td>
+<td><code>Return_{1,2,3,5,10,20,60}</code></td>
+<td>Động lượng đa khung</td>
+</tr>
+<tr>
+<td>Tỷ lệ với MA</td>
+<td><code>MA{5,10,20,50,100}_Ratio</code></td>
+<td>Xu hướng</td>
+</tr>
+<tr>
+<td>Volatility</td>
+<td><code>Vol_{5,10,20}</code></td>
+<td>Rủi ro / dao động</td>
+</tr>
+<tr>
+<td>Chỉ báo kỹ thuật</td>
+<td><code>RSI_14</code>, <code>MACD</code>, <code>MACD_Signal</code>, <code>MACD_Hist</code>, <code>Bollinger_b</code></td>
+<td>Quá mua / quá bán, đảo chiều</td>
+</tr>
+<tr>
+<td>Biên độ phiên</td>
+<td><code>HL_Range</code>, <code>OC_Range</code></td>
+<td>Lực giằng co</td>
+</tr>
+<tr>
+<td>Khối lượng</td>
+<td><code>Vol_Change</code>, <code>Volume_MA20_Ratio</code></td>
+<td>Dòng tiền</td>
+</tr>
+<tr>
+<td>Xu hướng dài hạn</td>
+<td><code>Trend_MA50_200</code></td>
+<td>Golden cross / death cross</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4.2.3.-%C4%90%E1%BB%99-%C4%91o">4.2.3. Độ đo<a class="anchor-link" href="#4.2.3.-%C4%90%E1%BB%99-%C4%91o">¶</a></h3><table>
 <thead>
 <tr>
 <th>Metric</th>
-<th>Đơn vị</th>
 <th>Diễn giải</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>MAE</strong></td>
-<td>lợi suất / VND</td>
-<td>Sai số tuyệt đối trung bình.</td>
-</tr>
-<tr>
-<td><strong>RMSE</strong></td>
-<td>lợi suất / VND</td>
-<td>Phạt nặng các sai số lớn.</td>
+<td><strong>MAE / RMSE</strong></td>
+<td>Sai số trên log-return</td>
 </tr>
 <tr>
 <td><strong>R²</strong></td>
-<td>—</td>
-<td>Tỷ lệ phương sai được giải thích.</td>
+<td>Tỷ lệ phương sai được giải thích</td>
 </tr>
 <tr>
 <td><strong>DirAcc(%)</strong></td>
-<td>%</td>
-<td>Tỷ lệ dự đoán <strong>đúng dấu</strong> (lên/xuống) — quan trọng với chiến lược giao dịch.</td>
+<td>Tỷ lệ đoán đúng chiều (lên/xuống) — <strong>chỉ số chính</strong></td>
+</tr>
+<tr>
+<td><strong>DirAcc_filt(%)</strong></td>
+<td>DirAcc loại 10 % phiên biến động nhỏ nhất (lọc nhiễu)</td>
+</tr>
+<tr>
+<td><strong>MAPE(%)</strong> trên giá VND</td>
+<td>Sai số tương đối khi back-transform về giá</td>
 </tr>
 </tbody>
 </table>
-<p>Kết quả sẽ được trình bày trên <strong>hai miền</strong>: lợi suất (đánh giá mô hình) và giá VND (trực giác cho người đọc).</p>
-<h3 id="4.2.3.-C%C3%A1c-ph%C6%B0%C6%A1ng-ph%C3%A1p-d%E1%BB%B1-ki%E1%BA%BFn">4.2.3. Các phương pháp dự kiến<a class="anchor-link" href="#4.2.3.-C%C3%A1c-ph%C6%B0%C6%A1ng-ph%C3%A1p-d%E1%BB%B1-ki%E1%BA%BFn">¶</a></h3><ol>
-<li><strong>Linear Regression</strong> — đường cơ sở (baseline) tuyến tính có giải thích được.</li>
-<li><strong>K-Nearest Neighbors (KNN)</strong> — dự đoán theo các phiên "giống" trong quá khứ, không tham số, bắt mẫu cục bộ.</li>
-<li><strong>Random Forest</strong> — ensemble cây quyết định, mạnh trên đặc trưng dạng bảng, robust với nhiễu.</li>
-<li><strong>Voting Ensemble</strong> — trung bình dự đoán của 3 mô hình trên, kỳ vọng giảm phương sai và ổn định kết quả.</li>
+<p><strong>Chia train/test:</strong> chronological 80/20 (không xáo trộn) — phản ánh kịch
+bản triển khai thực tế.</p>
+<h3 id="4.2.4.-B%E1%BB%91n-m%C3%B4-h%C3%ACnh-th%E1%BB%AD-nghi%E1%BB%87m">4.2.4. Bốn mô hình thử nghiệm<a class="anchor-link" href="#4.2.4.-B%E1%BB%91n-m%C3%B4-h%C3%ACnh-th%E1%BB%AD-nghi%E1%BB%87m">¶</a></h3><ol>
+<li><strong>Linear Regression</strong> — baseline tuyến tính.</li>
+<li><strong>K-Nearest Neighbors (k = 25)</strong> — phi tham số, học theo các phiên giống.</li>
+<li><strong>Random Forest (500 cây, max_depth = 6, min_samples_leaf = 20)</strong> —
+phi tuyến, robust.</li>
+<li><strong>Voting Ensemble</strong> — trung bình dự đoán của 3 mô hình trên.</li>
 </ol>
-<p>Tất cả mô hình đều được bao bằng <code>Pipeline(StandardScaler + estimator)</code> để công bằng giữa các thuật toán nhạy thang đo (KNN, LR) và các thuật toán dạng cây.</p>
-<h3 id="4.2.4.-K%E1%BA%BF-ho%E1%BA%A1ch-th%E1%BB%B1c-hi%E1%BB%87n-v%C3%A0-ph%C3%A2n-c%C3%B4ng">4.2.4. Kế hoạch thực hiện và phân công<a class="anchor-link" href="#4.2.4.-K%E1%BA%BF-ho%E1%BA%A1ch-th%E1%BB%B1c-hi%E1%BB%87n-v%C3%A0-ph%C3%A2n-c%C3%B4ng">¶</a></h3><table>
+<h3 id="4.2.5.-K%E1%BA%BF-ho%E1%BA%A1ch-th%E1%BB%B1c-hi%E1%BB%87n-v%C3%A0-ph%C3%A2n-c%C3%B4ng">4.2.5. Kế hoạch thực hiện và phân công<a class="anchor-link" href="#4.2.5.-K%E1%BA%BF-ho%E1%BA%A1ch-th%E1%BB%B1c-hi%E1%BB%87n-v%C3%A0-ph%C3%A2n-c%C3%B4ng">¶</a></h3><table>
 <thead>
 <tr>
 <th>Tuần</th>
@@ -8099,32 +8134,32 @@ Khoảng thời gian: 2009-06-30 00:00:00 → 2026-05-15 07:00:00+00:00
 <tbody>
 <tr>
 <td>1</td>
-<td>Tải dữ liệu qua <code>yfinance</code>, lưu CSV, EDA cơ bản</td>
+<td>Tải dữ liệu qua <code>yfinance</code>, EDA cơ bản</td>
 <td>Bá Hoài Sơn</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Feature engineering, kiểm tra correlation, train Linear Regression + KNN</td>
+<td>Feature engineering, train LR + KNN</td>
 <td>Bá Hoài Sơn</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Train Random Forest, Voting Ensemble, tinh chỉnh hyperparameter</td>
+<td>Train RF + Ensemble, sweep đa horizon</td>
 <td>Bùi Thanh Tú</td>
 </tr>
 <tr>
 <td>4</td>
-<td>So sánh, vẽ biểu đồ, viết Milestone</td>
+<td>So sánh, biểu đồ, Milestone</td>
 <td>Cả nhóm</td>
 </tr>
 <tr>
 <td>5</td>
-<td>Hoàn thiện Report, chuẩn bị Presentation</td>
+<td>Report + Presentation</td>
 <td>Cả nhóm</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Phân công cụ thể:</strong></p>
+<p><strong>Phân công cụ thể</strong></p>
 <table>
 <thead>
 <tr>
@@ -8135,30 +8170,30 @@ Khoảng thời gian: 2009-06-30 00:00:00 → 2026-05-15 07:00:00+00:00
 <tbody>
 <tr>
 <td><strong>Bá Hoài Sơn</strong></td>
-<td>Thu thập &amp; làm sạch dữ liệu; EDA; Linear Regression; KNN; biểu đồ giá lịch sử &amp; phân phối; Proposal; Presentation.</td>
+<td>Thu thập dữ liệu; EDA; Linear Regression; KNN; biểu đồ giá &amp; phân phối; Proposal; Presentation.</td>
 </tr>
 <tr>
 <td><strong>Bùi Thanh Tú</strong></td>
-<td>Feature engineering nâng cao (RSI, MA-ratio, volatility); Random Forest; Voting Ensemble; biểu đồ so sánh &amp; dự đoán/thực tế; Milestone; Report.</td>
+<td>Feature engineering nâng cao (MACD, Bollinger, longer momentum); Random Forest; Voting Ensemble; sweep đa horizon; Milestone; Report.</td>
 </tr>
 </tbody>
 </table>
-<p>Cả hai cùng thảo luận về phương pháp, review code và viết phần "Hạn chế / Hướng phát triển" trong Report.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bd2864ee">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a66ae2da">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="4.3.-K%E1%BA%BFt-qu%E1%BA%A3-k%E1%BB%B3-v%E1%BB%8Dng">4.3. Kết quả kỳ vọng<a class="anchor-link" href="#4.3.-K%E1%BA%BFt-qu%E1%BA%A3-k%E1%BB%B3-v%E1%BB%8Dng">¶</a></h2><ul>
-<li><strong>MAPE giá</strong> dưới 2 % (sai số trung bình ~1.5 nghìn VND trên giá ~80 nghìn VND).</li>
-<li><strong>DirAcc</strong> &gt; 50 % để có giá trị thực tiễn (dự đoán dấu tốt hơn random).</li>
-<li>Random Forest hoặc Voting Ensemble đứng đầu trên metric tổng hợp; Linear Regression đóng vai trò baseline.</li>
-<li>Nhận diện được hạn chế: mô hình <strong>không</strong> thể dự đoán các biến cố ngoại sinh (tin tức, sốc thị trường, chính sách) — sẽ được trao đổi kỹ trong Report.</li>
+<li><strong>DirAcc trên horizon 20 phiên ≥ 52 %</strong> cho ít nhất 1 mô hình (vượt mức
+ngẫu nhiên có ý nghĩa).</li>
+<li><strong>MAPE giá</strong> dưới 5 % (1 tháng).</li>
+<li><strong>Phát hiện đa horizon</strong>: DirAcc tăng theo horizon — xác nhận tín hiệu xu
+hướng trung hạn dự đoán được, còn ngắn hạn bị nhiễu áp đảo.</li>
 </ul>
 <hr/>
 <p><em>Kết thúc Đề xuất.</em></p>

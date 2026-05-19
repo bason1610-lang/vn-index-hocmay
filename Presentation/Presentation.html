@@ -7435,7 +7435,7 @@ main {
 <main>
 <div class="reveal">
 <div class="slides"><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cd74ee2b">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=44ac1cf6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7448,39 +7448,39 @@ main {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=18990ebd">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8dce9d8d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="1.-B%C3%A0i-to%C3%A1n">1. Bài toán<a class="anchor-link" href="#1.-B%C3%A0i-to%C3%A1n">¶</a></h2><ul>
-<li>Có thể dự đoán <strong>biến động giá ngày kế tiếp</strong> của cổ phiếu chỉ từ giá lịch sử không?</li>
+<li>Dự đoán <strong>biến động giá cổ phiếu</strong> chỉ từ chuỗi giá quá khứ.</li>
 <li><strong>Mã thử nghiệm:</strong> VCB (Vietcombank — <code>VCB.VN</code>).</li>
 <li><strong>Loại bài toán:</strong> Hồi quy có giám sát trên chuỗi thời gian.</li>
-<li><strong>Ý nghĩa:</strong> Hỗ trợ ra quyết định đầu tư, kiểm chứng giả thuyết Hiệu Quả Thị Trường (EMH).</li>
+<li><strong>Ý nghĩa:</strong> Hỗ trợ đầu tư swing trading, kiểm chứng EMH.</li>
 </ul>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d1915091">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fd0a203b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="2.-D%E1%BB%AF-li%E1%BB%87u">2. Dữ liệu<a class="anchor-link" href="#2.-D%E1%BB%AF-li%E1%BB%87u">¶</a></h2><ul>
-<li><strong>Nguồn:</strong> Yahoo Finance qua <code>yfinance</code> → lưu <code>data/vcb_stock.csv</code>.</li>
+<li><strong>Nguồn:</strong> Yahoo Finance qua <code>yfinance</code> → <code>data/vcb_stock.csv</code>.</li>
 <li><strong>Quy mô:</strong> 7.673 quan sát (4.209 phiên ngày + 3.464 phiên giờ).</li>
-<li><strong>Khoảng thời gian:</strong> 2009-06-30 → 2026-05-15.</li>
-<li><strong>Cột:</strong> <code>Date</code>, <code>Open</code>, <code>High</code>, <code>Low</code>, <code>Close</code>, <code>Volume</code>, <code>Interval</code>, <code>Ticker</code>, <code>Symbol</code>.</li>
+<li><strong>Khoảng:</strong> 2009-06-30 → 2026-05-15.</li>
+<li><strong>Cột:</strong> <code>Date</code>, OHLCV, <code>Interval</code>, <code>Ticker</code>/<code>Symbol</code>.</li>
 </ul>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a6bd1365">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c5a0995e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7491,75 +7491,114 @@ main {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=98c19cb6">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=54923bfe">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="4.-C%E1%BA%A1m-b%E1%BA%ABy:-d%E1%BB%B1-%C4%91o%C3%A1n-gi%C3%A1-tuy%E1%BB%87t-%C4%91%E1%BB%91i">4. Cạm bẫy: dự đoán giá tuyệt đối<a class="anchor-link" href="#4.-C%E1%BA%A1m-b%E1%BA%ABy:-d%E1%BB%B1-%C4%91o%C3%A1n-gi%C3%A1-tuy%E1%BB%87t-%C4%91%E1%BB%91i">¶</a></h2><p>Khi dùng giá tuyệt đối làm input/output:</p>
-<table>
+<h2 id="4.-C%E1%BA%A1m-b%E1%BA%ABy-ban-%C4%91%E1%BA%A7u">4. Cạm bẫy ban đầu<a class="anchor-link" href="#4.-C%E1%BA%A1m-b%E1%BA%ABy-ban-%C4%91%E1%BA%A7u">¶</a></h2><table>
 <thead>
 <tr>
-<th>Mô hình</th>
-<th>RMSE</th>
-<th>R²</th>
+<th>Thử nghiệm</th>
+<th style="text-align:right">DirAcc</th>
+<th>Vấn đề</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Linear Regression</td>
-<td>873</td>
-<td><strong>0.96</strong></td>
+<td>Dự đoán <strong>giá tuyệt đối</strong></td>
+<td style="text-align:right">—</td>
+<td>LR sao chép giá; RF/KNN R² âm vì không ngoại suy được</td>
 </tr>
 <tr>
-<td>Random Forest</td>
-<td>9.480</td>
-<td>-3.79</td>
+<td>Dự đoán <strong>return 1 ngày</strong></td>
+<td style="text-align:right">43-44 %</td>
+<td>Nhiễu áp đảo + 10 % phiên có Return = 0</td>
 </tr>
 <tr>
-<td>KNN</td>
-<td>11.387</td>
-<td>-5.92</td>
+<td>Dự đoán <strong>log-return 20 ngày</strong></td>
+<td style="text-align:right"><strong>54.8 %</strong></td>
+<td>✓ Vượt ngẫu nhiên</td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>LR "thắng" giả tạo — chỉ <strong>sao chép</strong> giá hôm nay.</li>
-<li>Tree/KNN R² âm vì <strong>không thể ngoại suy</strong> ngoài miền giá đã thấy.</li>
-<li>→ Phải biến đổi bài toán.</li>
-</ul>
+<p>→ <strong>Bài học</strong>: chọn đúng target và horizon là chìa khóa.</p>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=42b753f1">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a5df408b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="5.-Gi%E1%BA%A3i-ph%C3%A1p:-d%E1%BB%B1-%C4%91o%C3%A1n-L%E1%BB%A2I-SU%E1%BA%A4T">5. Giải pháp: dự đoán LỢI SUẤT<a class="anchor-link" href="#5.-Gi%E1%BA%A3i-ph%C3%A1p:-d%E1%BB%B1-%C4%91o%C3%A1n-L%E1%BB%A2I-SU%E1%BA%A4T">¶</a></h2><p>$$\hat r_{t+1} = f(\mathbf{x}_t),\qquad \hat C_{t+1} = C_t \cdot (1 + \hat r_{t+1})$$</p>
-<p><strong>Đặc trưng đều STATIONARY:</strong></p>
+<h2 id="5.-Gi%E1%BA%A3i-ph%C3%A1p:-d%E1%BB%B1-%C4%91o%C3%A1n-LOG-RETURN-20-phi%C3%AAn">5. Giải pháp: dự đoán LOG-RETURN 20 phiên<a class="anchor-link" href="#5.-Gi%E1%BA%A3i-ph%C3%A1p:-d%E1%BB%B1-%C4%91o%C3%A1n-LOG-RETURN-20-phi%C3%AAn">¶</a></h2><p>$$\hat r_{t+20} = f(\mathbf x_t),\qquad \hat C_{t+20} = C_t\,e^{\hat r_{t+20}}$$</p>
 <ul>
-<li>Lợi suất trễ: <code>Return_{1, 2, 3, 5, 10}</code></li>
-<li>Tỷ lệ với MA: <code>MA{5,10,20}_Ratio</code></li>
-<li>Volatility: <code>Vol_{5, 10}</code></li>
-<li>RSI(14)</li>
-<li>Biên độ trong ngày: <code>HL_Range</code>, <code>OC_Range</code></li>
-<li>Khối lượng: <code>Vol_Change</code></li>
+<li><strong>20 phiên</strong> ≈ 1 tháng giao dịch — phổ biến trong swing trading.</li>
+<li><strong>Log-return</strong> symmetric + cộng được + gần Gaussian.</li>
+<li>Target stationary → mô hình phi tuyến tổng quát hóa công bằng.</li>
 </ul>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bf051d75">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fa5824f7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="6.-B%E1%BB%91n-m%C3%B4-h%C3%ACnh-th%E1%BB%AD-nghi%E1%BB%87m">6. Bốn mô hình thử nghiệm<a class="anchor-link" href="#6.-B%E1%BB%91n-m%C3%B4-h%C3%ACnh-th%E1%BB%AD-nghi%E1%BB%87m">¶</a></h2><table>
+<h2 id="6.-25-%C4%91%E1%BA%B7c-tr%C6%B0ng-stationary">6. 25 đặc trưng stationary<a class="anchor-link" href="#6.-25-%C4%91%E1%BA%B7c-tr%C6%B0ng-stationary">¶</a></h2><table>
+<thead>
+<tr>
+<th>Nhóm</th>
+<th>Đặc trưng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Momentum</td>
+<td><code>Return_{1,2,3,5,10,20,60}</code></td>
+</tr>
+<tr>
+<td>Xu hướng</td>
+<td><code>MA{5,10,20,50,100}_Ratio</code></td>
+</tr>
+<tr>
+<td>Volatility</td>
+<td><code>Vol_{5,10,20}</code></td>
+</tr>
+<tr>
+<td>Chỉ báo</td>
+<td><code>RSI_14</code>, <code>MACD</code>, <code>MACD_Signal</code>, <code>MACD_Hist</code>, <code>Bollinger_b</code></td>
+</tr>
+<tr>
+<td>Biên độ</td>
+<td><code>HL_Range</code>, <code>OC_Range</code></td>
+</tr>
+<tr>
+<td>Volume</td>
+<td><code>Vol_Change</code>, <code>Volume_MA20_Ratio</code></td>
+</tr>
+<tr>
+<td>Trend dài</td>
+<td><code>Trend_MA50_200</code> (sign MA50 - MA200)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1171e714">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="7.-B%E1%BB%91n-m%C3%B4-h%C3%ACnh-th%E1%BB%AD-nghi%E1%BB%87m">7. Bốn mô hình thử nghiệm<a class="anchor-link" href="#7.-B%E1%BB%91n-m%C3%B4-h%C3%ACnh-th%E1%BB%AD-nghi%E1%BB%87m">¶</a></h2><table>
 <thead>
 <tr>
 <th>Mô hình</th>
@@ -7572,42 +7611,42 @@ main {
 <td>Baseline tuyến tính</td>
 </tr>
 <tr>
-<td><strong>K-Nearest Neighbors (k=15)</strong></td>
-<td>Phi tham số, học theo các phiên "giống"</td>
+<td><strong>KNN (k=25)</strong></td>
+<td>Phi tham số, học theo phiên giống</td>
 </tr>
 <tr>
-<td><strong>Random Forest (400 cây)</strong></td>
-<td>Phi tuyến, robust với nhiễu</td>
+<td><strong>Random Forest (500 cây)</strong></td>
+<td>Phi tuyến, robust</td>
 </tr>
 <tr>
 <td><strong>Voting Ensemble</strong></td>
-<td>Trung bình dự đoán của 3 mô hình trên</td>
+<td>Trung bình 3 mô hình trên</td>
 </tr>
 </tbody>
 </table>
-<p><em>Tất cả bao bằng <code>Pipeline(StandardScaler + estimator)</code>.</em></p>
+<p><em>Pipeline(StandardScaler + estimator) — tránh leak + công bằng.</em></p>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3881be18">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5c4e6652">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="7.-Pipeline-&amp;-c%C3%A1ch-%C4%91%C3%A1nh-gi%C3%A1">7. Pipeline &amp; cách đánh giá<a class="anchor-link" href="#7.-Pipeline-&amp;-c%C3%A1ch-%C4%91%C3%A1nh-gi%C3%A1">¶</a></h2><ol>
-<li>Load dữ liệu (<code>load_raw_data</code>).</li>
-<li>Sinh đặc trưng (<code>build_features</code>).</li>
-<li>Chia <strong>theo trật tự thời gian</strong> 80% train / 20% test (không xáo trộn).</li>
-<li>Huấn luyện 4 mô hình.</li>
-<li>Đánh giá: <strong>MAE, RMSE, R²</strong> (lợi suất) + <strong>DirAcc(%)</strong> + <strong>MAPE giá</strong>.</li>
-<li>Trực quan và kết luận.</li>
+<h2 id="8.-Quy-tr%C3%ACnh-&amp;-%C4%91%C3%A1nh-gi%C3%A1">8. Quy trình &amp; đánh giá<a class="anchor-link" href="#8.-Quy-tr%C3%ACnh-&amp;-%C4%91%C3%A1nh-gi%C3%A1">¶</a></h2><ol>
+<li>Load (<code>load_raw_data</code>).</li>
+<li>Feature engineering (<code>build_features</code>, h=20).</li>
+<li>Chronological split 80/20.</li>
+<li>Train 4 mô hình.</li>
+<li>Đánh giá: <strong>MAE, RMSE, R², DirAcc, DirAcc_filt</strong> trên log-return + <strong>MAPE</strong> trên giá.</li>
+<li>Sweep đa horizon {1, 5, 10, 20, 60}.</li>
 </ol>
 </div>
 </div>
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7152081b">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=157fbcdf">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7619,10 +7658,10 @@ main {
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'../scripts'</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ml_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">run_full_pipeline</span>
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">run_full_pipeline</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="s1">'1d'</span><span class="p">,</span> <span class="n">train_ratio</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">save_images</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'--- METRIC TRÊN MIỀN LỢI SUẤT ---'</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">run_full_pipeline</span><span class="p">(</span><span class="n">horizon</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">save_images</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'--- METRIC LOG-RETURN (horizon=20) ---'</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s1">'metrics_return'</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'--- METRIC TRÊN MIỀN GIÁ (VND) ---'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'--- METRIC GIÁ (VND) ---'</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s1">'metrics_price'</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -7636,7 +7675,7 @@ main {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>--- METRIC TRÊN MIỀN LỢI SUẤT ---
+<pre>--- METRIC LOG-RETURN (horizon=20) ---
 </pre>
 </div>
 </div>
@@ -7665,9 +7704,11 @@ main {
 <th>RMSE</th>
 <th>R2</th>
 <th>DirAcc(%)</th>
+<th>DirAcc_filt(%)</th>
 </tr>
 <tr>
 <th>Model</th>
+<th></th>
 <th></th>
 <th></th>
 <th></th>
@@ -7677,31 +7718,35 @@ main {
 <tbody>
 <tr>
 <th>Linear Regression</th>
-<td>0.009947</td>
-<td>0.014734</td>
-<td>-0.008529</td>
-<td>43.436754</td>
+<td>0.0455</td>
+<td>0.0650</td>
+<td>-0.1167</td>
+<td>54.7619</td>
+<td>54.3175</td>
 </tr>
 <tr>
 <th>KNN</th>
-<td>0.010691</td>
-<td>0.015518</td>
-<td>-0.118707</td>
-<td>44.152745</td>
+<td>0.0489</td>
+<td>0.0673</td>
+<td>-0.1940</td>
+<td>50.8772</td>
+<td>50.9749</td>
 </tr>
 <tr>
 <th>Random Forest</th>
-<td>0.009812</td>
-<td>0.014670</td>
-<td>0.000286</td>
-<td>44.272076</td>
+<td>0.0449</td>
+<td>0.0649</td>
+<td>-0.1132</td>
+<td>52.3810</td>
+<td>51.8106</td>
 </tr>
 <tr>
 <th>Ensemble</th>
-<td>0.010002</td>
-<td>0.014817</td>
-<td>-0.019962</td>
-<td>43.436754</td>
+<td>0.0450</td>
+<td>0.0647</td>
+<td>-0.1036</td>
+<td>52.7569</td>
+<td>52.7855</td>
 </tr>
 </tbody>
 </table>
@@ -7711,7 +7756,7 @@ main {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>--- METRIC TRÊN MIỀN GIÁ (VND) ---
+<pre>--- METRIC GIÁ (VND) ---
 </pre>
 </div>
 </div>
@@ -7750,27 +7795,27 @@ main {
 <tbody>
 <tr>
 <th>Linear Regression</th>
-<td>588.78</td>
-<td>882.00</td>
-<td>0.99</td>
+<td>2752.88</td>
+<td>4036.32</td>
+<td>4.54</td>
 </tr>
 <tr>
 <th>KNN</th>
-<td>631.47</td>
-<td>924.85</td>
-<td>1.07</td>
+<td>2967.66</td>
+<td>4171.20</td>
+<td>4.91</td>
 </tr>
 <tr>
 <th>Random Forest</th>
-<td>580.47</td>
-<td>878.92</td>
-<td>0.98</td>
+<td>2715.23</td>
+<td>4031.34</td>
+<td>4.47</td>
 </tr>
 <tr>
 <th>Ensemble</th>
-<td>591.50</td>
-<td>885.99</td>
-<td>1.00</td>
+<td>2727.60</td>
+<td>4016.44</td>
+<td>4.50</td>
 </tr>
 </tbody>
 </table>
@@ -7780,86 +7825,132 @@ main {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=197ae0ea">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fbfa4e30">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="8.-So-s%C3%A1nh-4-m%C3%B4-h%C3%ACnh">8. So sánh 4 mô hình<a class="anchor-link" href="#8.-So-s%C3%A1nh-4-m%C3%B4-h%C3%ACnh">¶</a></h2><p><img alt="" src="../image/model_comparison.png"/></p>
+<h2 id="9.-So-s%C3%A1nh-4-m%C3%B4-h%C3%ACnh-(horizon-=-20)">9. So sánh 4 mô hình (horizon = 20)<a class="anchor-link" href="#9.-So-s%C3%A1nh-4-m%C3%B4-h%C3%ACnh-(horizon-=-20)">¶</a></h2><p><img alt="" src="../image/model_comparison.png"/></p>
 <ul>
-<li><strong>Random Forest</strong> và <strong>Linear Regression</strong> đứng đầu.</li>
-<li>KNN kém nhất (R² âm trên miền lợi suất).</li>
-<li>Ensemble <strong>không</strong> vượt được Random Forest đơn lẻ — bị KNN "kéo xuống".</li>
+<li><strong>Tất cả 4 mô hình vượt 50 %.</strong></li>
+<li><strong>Linear Regression dẫn đầu DirAcc 54.76 %</strong> — bài học: đơn giản không có nghĩa là yếu.</li>
 </ul>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9416b262">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=54fbb763">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="9.-D%E1%BB%B1-%C4%91o%C3%A1n-vs.-Th%E1%BB%B1c-t%E1%BA%BF-(gi%C3%A1)">9. Dự đoán vs. Thực tế (giá)<a class="anchor-link" href="#9.-D%E1%BB%B1-%C4%91o%C3%A1n-vs.-Th%E1%BB%B1c-t%E1%BA%BF-(gi%C3%A1)">¶</a></h2><p><img alt="" src="../image/predictions_vs_actual.png"/></p>
-<ul>
-<li>Cả 4 đường dự đoán <strong>bám rất sát</strong> giá thực tế.</li>
-<li>MAE giá ~ 580–630 VND (<strong>MAPE ~ 1 %</strong>).</li>
-</ul>
+<h2 id="10.-D%E1%BB%B1-%C4%91o%C3%A1n-vs-Th%E1%BB%B1c-t%E1%BA%BF-(gi%C3%A1,-h=20)">10. Dự đoán vs Thực tế (giá, h=20)<a class="anchor-link" href="#10.-D%E1%BB%B1-%C4%91o%C3%A1n-vs-Th%E1%BB%B1c-t%E1%BA%BF-(gi%C3%A1,-h=20)">¶</a></h2><p><img alt="" src="../image/predictions_vs_actual.png"/></p>
+<p>MAPE giá ~ 4.5 % cho horizon 1 tháng.</p>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1ef1ef49">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=90a23476">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="10.-Hi%E1%BB%87u-Qu%E1%BA%A3-Th%E1%BB%8B-Tr%C6%B0%E1%BB%9Dng-%E2%80%94-ph%C3%A1t-hi%E1%BB%87n-ch%C3%ADnh">10. Hiệu Quả Thị Trường — phát hiện chính<a class="anchor-link" href="#10.-Hi%E1%BB%87u-Qu%E1%BA%A3-Th%E1%BB%8B-Tr%C6%B0%E1%BB%9Dng-%E2%80%94-ph%C3%A1t-hi%E1%BB%87n-ch%C3%ADnh">¶</a></h2><ul>
-<li><strong>DirAcc ~ 43–44 %</strong> — không vượt được random 50 %.</li>
-<li>Mô hình dự đoán <strong>mức giá</strong> chính xác chỉ vì quán tính ngắn hạn $\hat C_{t+1} \approx C_t$.</li>
-<li>Nhưng dự đoán <strong>chiều</strong> biến động (lên/xuống) thì gần như ngẫu nhiên.</li>
-<li>→ Phù hợp với dạng yếu của Hiệu Quả Thị Trường (EMH): giá lịch sử <strong>không</strong> đủ để kiếm lợi nhuận vượt trội.</li>
-</ul>
+<h2 id="11.-SWEEP-%C4%90A-HORIZON-%E2%80%94-ph%C3%A1t-hi%E1%BB%87n-ch%C3%ADnh">11. SWEEP ĐA HORIZON — phát hiện chính<a class="anchor-link" href="#11.-SWEEP-%C4%90A-HORIZON-%E2%80%94-ph%C3%A1t-hi%E1%BB%87n-ch%C3%ADnh">¶</a></h2><p><img alt="" src="../image/horizon_comparison.png"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">h</th>
+<th>Best</th>
+<th style="text-align:right">DirAcc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>KNN</td>
+<td style="text-align:right">50.7 %</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>LR</td>
+<td style="text-align:right">48.7 %</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>RF</td>
+<td style="text-align:right">50.6 %</td>
+</tr>
+<tr>
+<td style="text-align:right"><strong>20</strong></td>
+<td><strong>LR</strong></td>
+<td style="text-align:right"><strong>54.8 %</strong></td>
+</tr>
+<tr>
+<td style="text-align:right"><strong>60</strong></td>
+<td><strong>Ensemble</strong></td>
+<td style="text-align:right"><strong>61.6 %</strong></td>
+</tr>
+</tbody>
+</table>
+<p>→ Tín hiệu xu hướng <strong>TĂNG THEO HORIZON</strong>.</p>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f1433169">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ee7d6f76">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="11.-H%E1%BA%A1n-ch%E1%BA%BF-&amp;-H%C6%B0%E1%BB%9Bng-ph%C3%A1t-tri%E1%BB%83n">11. Hạn chế &amp; Hướng phát triển<a class="anchor-link" href="#11.-H%E1%BA%A1n-ch%E1%BA%BF-&amp;-H%C6%B0%E1%BB%9Bng-ph%C3%A1t-tri%E1%BB%83n">¶</a></h2><p><strong>Hạn chế:</strong></p>
+<h2 id="12.-Hi%E1%BB%87u-Qu%E1%BA%A3-Th%E1%BB%8B-Tr%C6%B0%E1%BB%9Dng-(EMH)">12. Hiệu Quả Thị Trường (EMH)<a class="anchor-link" href="#12.-Hi%E1%BB%87u-Qu%E1%BA%A3-Th%E1%BB%8B-Tr%C6%B0%E1%BB%9Dng-(EMH)">¶</a></h2><ul>
+<li>DirAcc 1 ngày ≈ 50 % → <strong>xác nhận EMH dạng yếu</strong> ở ngắn hạn.</li>
+<li>DirAcc 20-60 ngày = 55-62 % → tín hiệu trung-dài hạn <strong>dự đoán được</strong>.</li>
+<li>Khoảng cách 4.8 - 11.6 điểm so với 50 %: ý nghĩa thống kê 2.7-6.5σ.</li>
+</ul>
+<p><strong>Lưu ý:</strong> Dự đoán đúng chiều ≠ kiếm lợi sau phí giao dịch.</p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e7104157">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="13.-H%E1%BA%A1n-ch%E1%BA%BF-&amp;-H%C6%B0%E1%BB%9Bng-ph%C3%A1t-tri%E1%BB%83n">13. Hạn chế &amp; Hướng phát triển<a class="anchor-link" href="#13.-H%E1%BA%A1n-ch%E1%BA%BF-&amp;-H%C6%B0%E1%BB%9Bng-ph%C3%A1t-tri%E1%BB%83n">¶</a></h2><p><strong>Hạn chế:</strong></p>
 <ul>
-<li>Chỉ dùng giá quá khứ, <strong>không</strong> xét tin tức / yếu tố vĩ mô.</li>
-<li>Không dự đoán được sốc thị trường (COVID, biến động chính sách…).</li>
-<li>Đánh giá theo một lần chia 80/20 — chưa walk-forward.</li>
+<li>Chỉ dùng giá quá khứ, một mã (VCB), một lần chia 80/20.</li>
+<li>Siêu tham số chọn theo kinh nghiệm.</li>
 </ul>
 <p><strong>Hướng phát triển:</strong></p>
 <ul>
-<li>Bổ sung sentiment (tin tức, mạng xã hội).</li>
-<li>Mô hình tuần tự (LSTM, Temporal Fusion Transformer).</li>
-<li>Walk-forward validation, thử trên rổ VN30 / VN-Index.</li>
-<li>Tối ưu siêu tham số bằng <code>TimeSeriesSplit</code> + grid search.</li>
+<li>Walk-forward validation + bootstrap CI.</li>
+<li>Sentiment + biến vĩ mô.</li>
+<li>LSTM / Transformer cho chuỗi thời gian.</li>
+<li>Mở rộng rổ VN30, tích hợp chi phí giao dịch.</li>
 </ul>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=59931423">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8b5b9efa">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="12.-C%E1%BA%A3m-%C6%A1n-%E2%80%94-Q-&amp;-A">12. Cảm ơn — Q &amp; A<a class="anchor-link" href="#12.-C%E1%BA%A3m-%C6%A1n-%E2%80%94-Q-&amp;-A">¶</a></h2><p><strong>Bá Hoài Sơn — Bùi Thanh Tú</strong><br/>
+<h2 id="14.-C%E1%BA%A3m-%C6%A1n-%E2%80%94-Q-&amp;-A">14. Cảm ơn — Q &amp; A<a class="anchor-link" href="#14.-C%E1%BA%A3m-%C6%A1n-%E2%80%94-Q-&amp;-A">¶</a></h2><p><strong>Bá Hoài Sơn — Bùi Thanh Tú</strong><br/>
 <em>Học Máy — HCMUTE</em></p>
-<p>Mã nguồn: <code>scripts/ml_utils.py</code><br/>
-Tái lập: <code>python scripts/fetch_data.py</code> → mở 4 notebook.</p>
+<ul>
+<li>Mã nguồn: <code>scripts/ml_utils.py</code></li>
+<li>Tái lập: <code>python scripts/fetch_data.py</code> → mở 4 notebook</li>
+<li>Phát hiện chính: <strong>DirAcc 54.8 %</strong> ở horizon = 20</li>
+</ul>
 </div>
 </div>
 </div>
